@@ -22,7 +22,7 @@ app.post("/update", (req, res) => {
     brainrot: brainrot || null,
     geracao: geracao || null,
     jogadores,
-    updatedAt: new Date().toISOString()
+    updatedAt: new Date().toLocaleString('sv-SE', { timeZone: 'America/Sao_Paulo' }).replace(' ', 'T') + '-03:00'
   };
 
   return res.json({ ok: true });
